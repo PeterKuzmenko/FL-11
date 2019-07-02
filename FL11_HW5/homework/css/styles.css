@@ -73,6 +73,9 @@ body {
 .photo-4::after {
   background: #d12767;
 }
+.post:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
 header {
   height: 115px;
   padding: 0 25px;
