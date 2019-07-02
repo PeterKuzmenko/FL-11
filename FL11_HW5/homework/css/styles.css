@@ -1,0 +1,287 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+:root {
+  --bg-color--dark: #0b192f;
+  --bg-color--header: #162b4d;
+  --link: #fff;
+  --link--hover: #b8b8b8;
+  --bg-footer-color: #162b4d;;
+}
+
+body {
+  font-family: roboto;
+  max-width: 1395px;
+  min-width: 250px;
+  margin: 0 auto;
+  background: #0b192f;
+  padding: 0 10px;
+}
+.post-1 {
+	background: #B71757;
+}
+.post-2 {
+	background: #0D7E71;
+}
+.post-3 {
+	background: #b1660e;
+}
+.post-4 {
+	background: #d12767;
+}
+.post-5 {
+	background: #2d95bb;
+}
+
+/* Your styles go here */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-part article:hover,
+.main-menu a:hover {
+  cursor: pointer;
+}
+.photo {
+  position: relative;
+}
+.photo:hover::after {
+  display: block;
+}
+.photo::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: none;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.photo-1::after {
+  background: #B71757;
+}
+.photo-2::after {
+  background: #0D7E71;
+}
+.photo-3::after {
+  background: #b1660e;
+}
+.photo-4::after {
+  background: #d12767;
+}
+header {
+  height: 115px;
+  padding: 0 25px;
+  background: #162b4d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo {
+  font-size: 42px;
+  font-weight: lighter;
+}
+.header-logo span {
+  color: #d12955;
+}
+.main-menu {
+  font-size: 21px;
+}
+.main-menu a {
+  padding: 45px 20px;
+}
+.main-menu a:hover {
+  background: #283d5f;
+}
+.icon-menu {
+  display: none;
+}
+header,
+header a {
+  color: white;
+  text-decoration: none;
+}
+main {
+  margin: 1.6% 0;
+  display: flex;
+  justify-content: space-between;
+}
+.main-part {
+  width: 75%;
+  color: #fff;
+}
+article {
+  display: flex;
+  flex-direction: row;
+}
+article:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+article .photo,
+article .post {
+  width: 50%;
+}
+article img {
+  width: 100%;
+  height: 100%;
+}
+article:last-child .post {
+  width: 100%;
+}
+.post {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: lighter;
+}
+article:nth-child(2n) .post {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.title {
+  font-size: 40px;
+  font-weight: lighter;
+  margin-bottom: 2%;
+}
+.content {
+  width: 75%;
+  padding: 10px;
+}
+.main-part .content p {
+  font-size: 18px;
+  opacity: 0.8;
+}
+.date {
+  opacity: 0.5;
+  font-size: 20px;
+}
+.date span {
+  display: block;
+  font-size: 40px;
+}
+.post-5 .content {
+  width: 90%;
+}
+.sidebar {
+  width: 23.4%;
+  min-width: 200px;
+  margin-left: 1.6%;
+}
+.news .new {
+  flex-direction: column;
+}
+.news .new:first-child {
+  margin-bottom: 8%;
+}
+.new img,
+.news .new .content {
+  width: 100%;
+}
+.new .title {
+  font-size: 30px;
+  font-weight: normal;
+}
+.new .content {
+  background: #fff;
+  padding: 20px;
+}
+.new p {
+  color: #b8b8b8;
+  font-size: 17px;
+  line-height: 1.6;
+}
+footer {
+  background: #162b4d;
+  padding: 40px 30px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: lighter;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px; 
+}
+footer p {
+  opacity: 0.4;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 240px;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+  .header-logo {
+    height: 90px;
+    vertical-align: middle;
+  }
+  .main-menu a {
+    display: none;
+  }
+  .main-menu .icon-menu {
+    display: block;
+    padding: 0;
+  }
+  .main-part {
+    width: 56%;
+  }
+  .title {
+    font-size: 40px;
+  }
+  .sidebar {
+    width: 42.4%;
+  }
+  .main-part article {
+    flex-direction: column;
+  }
+  .post .content {
+    width: 100%;
+    text-align: left;
+  }
+  article .post {
+    flex-direction: column;
+    align-items: center;
+  }
+  article:nth-child(2n) .post {
+    flex-direction: column;
+    text-align: center;
+  }
+  .date {
+    text-align: center;
+    margin: 20px 0;
+  }
+  .photo {
+    margin-bottom: -5px;
+  }
+  article .photo,
+  article .post {
+    width: 100%;
+  }
+  footer {
+    text-align: center;
+    flex-direction: column;
+  }
+  footer p {
+    line-height: 1.4;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    flex-direction: column;
+    margin: 30px 0 50px 0;
+  }
+  .main-part,
+  .sidebar {
+    width: 100%;
+  }
+  .sidebar {
+    margin: 0;
+  }
+  .news .new:first-child {
+    margin-bottom: 25px;
+  }
+}
