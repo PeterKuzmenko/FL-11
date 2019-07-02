@@ -99,6 +99,7 @@ header {
 }
 .icon-menu {
   display: none;
+  color: #fff;
 }
 header,
 header a {
