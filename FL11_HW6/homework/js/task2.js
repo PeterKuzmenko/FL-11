@@ -1,7 +1,7 @@
 let a, b, c, typeTriangle;
-a = +prompt('Введіть абсцису для точки A');
-b = +prompt('Введіть абсцису для точки B');
-c = +prompt('Введіть абсцису для точки C');
+a = +prompt('Введіть довжину сторони AB');
+b = +prompt('Введіть довжину сторони BC');
+c = +prompt('Введіть довжину сторони AC');
 if(a+b>c && b+c>a && a+c>b) {
 	if(a===b && b===c){
 		typeTriangle = 'Eequivalent';
